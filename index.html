@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Ignacio Astudillo</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- FONDO ANIMADO -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <h1>Ignacio Astudillo</h1>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h2>Desarrollador Full Stack & Diseñador Web</h2>
+            <p>Creo soluciones digitales intuitivas y seguras: aplicaciones móviles, sitios web y sistemas de gestión.</p>
+            <a href="#projects" class="btn">Ver Proyectos</a>
+        </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section id="about" data-aos="fade-right">
+        <h2>Sobre mí</h2>
+        <p>Soy desarrollador con experiencia en Flutter, Angular, NestJS, ExpressJS y diseño web responsivo. 
+            Me apasiona crear experiencias digitales fáciles de usar y adaptadas a cualquier dispositivo.</p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="projects">
+        <h2 data-aos="fade-up">Proyectos Destacados</h2>
+        <div class="projects-grid">
+            <div class="card" data-aos="zoom-in">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+                <h3>SafeWave App</h3>
+                <p>Aplicación móvil en Flutter para seguridad comunitaria con botones de contacto rápido.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                <h3>Wolf Seguridad</h3>
+                <p>Sitio web corporativo con servicios, formulario y curso online responsivo.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <ion-icon name="chatbubbles-outline"></ion-icon>
+                <h3>Muro de Conversaciones</h3>
+                <p>Plataforma estilo Patreon con login de Google para publicaciones y comentarios.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <ion-icon name="paw-outline"></ion-icon>
+                <h3>Gestión Veterinaria</h3>
+                <p>Sistema con ExpressJS + Angular para administrar mascotas con filtros y formularios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="skills" data-aos="fade-left">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+            <div><ion-icon name="logo-html5"></ion-icon><p>HTML</p></div>
+            <div><ion-icon name="logo-css3"></ion-icon><p>CSS</p></div>
+            <div><ion-icon name="logo-javascript"></ion-icon><p>JavaScript</p></div>
+            <div><ion-icon name="logo-angular"></ion-icon><p>Angular</p></div>
+            <div><ion-icon name="logo-nodejs"></ion-icon><p>Node.js</p></div>
+            <div><ion-icon name="logo-github"></ion-icon><p>GitHub</p></div>
+            <div><ion-icon name="phone-portrait-outline"></ion-icon><p>Flutter</p></div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" data-aos="fade-up">
+        <h2>Contacto</h2>
+        <form action="https://formsubmit.co/ignacioa.apalma321@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo" required>
+            <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>      
+            <!-- Opciones de seguridad para FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://tu-dominio.cl/gracias.html">
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Ignacio Astudillo - Portafolio</p>
+        <div class="socials">
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="mailto:ignacioa.apalma321@gmail.com"><ion-icon name="mail-outline"></ion-icon></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+    </script>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
