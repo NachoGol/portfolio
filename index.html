@@ -87,18 +87,22 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contact" data-aos="fade-up">
-        <h2>Contacto</h2>
-        <form action="https://formsubmit.co/ignacioa.apalma321@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Tu Nombre" required>
-            <input type="email" name="email" placeholder="Tu Correo" required>
-            <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>      
-            <!-- Opciones de seguridad para FormSubmit -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://tu-dominio.cl/gracias.html">
-            <button type="submit" class="btn">Enviar</button>
-        </form>
-    </section>
+<section id="contact" data-aos="fade-up">
+    <h2>Contacto</h2>
+    <form action="https://formsubmit.co/ignacioa.apalma321@gmail.com" method="POST">
+        <!-- Campos del formulario -->
+        <input type="text" name="name" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Tu Correo" required>
+        <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>      
+
+        <!-- Configuración de seguridad y formato -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu página web">
+        <input type="hidden" name="_template" value="table">
+
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+</section>
 
     <!-- FOOTER -->
     <footer>
