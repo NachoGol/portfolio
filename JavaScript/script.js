@@ -72,3 +72,46 @@ window.addEventListener("resize", () => {
 
 initParticles();
 animate();
+
+// ===============================
+// Manejo del formulario de contacto
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#contactForm");
+    const messageBox = document.querySelector("#formMessage");
+
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita redirección
+            const data = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { "Accept": "application/json" }
+            })
+            .then(response => {
+                if (response.ok) {
+                    messageBox.textContent = "✅ Tu mensaje ha sido enviado con éxito.";
+                    messageBox.style.display = "block";
+                    messageBox.style.color = "green";
+                    form.reset();
+
+                    // Ocultar después de 5 segundos
+                    setTimeout(() => {
+                        messageBox.style.display = "none";
+                    }, 5000);
+                } else {
+                    messageBox.textContent = "❌ Ocurrió un error. Inténtalo nuevamente.";
+                    messageBox.style.display = "block";
+                    messageBox.style.color = "red";
+                }
+            })
+            .catch(() => {
+                messageBox.textContent = "❌ Error en la conexión.";
+                messageBox.style.display = "block";
+                messageBox.style.color = "red";
+            });
+        });
+    }
+});
