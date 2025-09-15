@@ -80,9 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("#contactForm");
     const messageBox = document.querySelector("#formMessage");
 
-    if (form) {
+    if (form && messageBox) {
         form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Evita redirección
+            event.preventDefault(); 
             const data = new FormData(form);
 
             fetch(form.action, {
@@ -96,11 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     messageBox.style.display = "block";
                     messageBox.style.color = "green";
                     form.reset();
-
-                    // Ocultar después de 5 segundos
-                    setTimeout(() => {
-                        messageBox.style.display = "none";
-                    }, 5000);
+                    setTimeout(() => { messageBox.style.display = "none"; }, 5000);
                 } else {
                     messageBox.textContent = "❌ Ocurrió un error. Inténtalo nuevamente.";
                     messageBox.style.display = "block";

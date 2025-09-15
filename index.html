@@ -86,10 +86,10 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
+<!-- CONTACTO -->
 <section id="contact" data-aos="fade-up">
     <h2>Contacto</h2>
-    <form action="https://formsubmit.co/ignacioa.apalma321@gmail.com" method="POST">
+    <form id="contactForm" action="https://formsubmit.co/ajax/ignacioa.apalma321@gmail.com" method="POST">
         <!-- Campos del formulario -->
         <input type="text" name="name" placeholder="Tu Nombre" required>
         <input type="email" name="email" placeholder="Tu Correo" required>
@@ -102,6 +102,9 @@
 
         <button type="submit" class="btn">Enviar</button>
     </form>
+
+    <!-- Mensaje de confirmación -->
+    <p id="formMessage" style="display:none; font-weight:bold; margin-top:10px;"></p>
 </section>
 
     <!-- FOOTER -->
